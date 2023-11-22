@@ -62,21 +62,21 @@ favorite_dishes(person3);
 // name, age, printinfo, 
 // THEN do an arrow function for addAge to increment. takes a (), increment 
 
-function Nightblade(name, age) {
-    this.name = name;
-    this.age = age
-
+class Nightblade {
+    constructor(name,age) {
+        this.name = name
+        this.age = age
+    }
 
 //now the printInfo method
-    this.printInfo = () =>{
-        console.log(`${this.name} is ${this.age}. He has no age.`)
-        return "Sorry Not Sorry."
-    }
+    printInfo = () => {
+        return `${this.name} is ${this.age}. He has no age.`
+    };
 
-    this.addAge = () => {
-    this.age++;
+    addAge = (year) => {
+        this.age += year;
 
-    }
+    };
 }
 
 let Dragon = new Nightblade("Paarthurnax", 6500);
@@ -85,7 +85,7 @@ let Dragon2 = new Nightblade("Alduin", 760000000);
 Dragon.printInfo();
 Dragon2.printInfo();
 
-Dragon.addAge();
+Dragon.addAge(3);
 
 Dragon.printInfo();
 
